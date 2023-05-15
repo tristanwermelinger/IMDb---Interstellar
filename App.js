@@ -9,6 +9,7 @@ import {
 import logo from "./assets/logo-imdb.png";
 import Constants from "expo-constants";
 import film from "./assets/film.jpg";
+import matthew from "./assets/matthew.png";
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
         <Image source={logo} style={[styles.cover, styles.colorstyle]} />
         <View style={styles.container}>
           <Text style={[styles.cover, styles.bckg, styles.titlesize]}>
-            Interstellar
+            <Interstellara></Interstellara>
           </Text>
 
           <Text
@@ -30,21 +31,38 @@ const App = () => {
           >
             2014 PG-13 2h49min Adventure, Drama, Sci-Fi
           </Text>
-
           <View style={styles.flexrow}>
             <Image source={film} style={[styles.filmsize, styles.flexright]} />
-            <Text style={styles.textcolor}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-              quasi et possimus quae, earum, incidunt cumque praesentium
-              doloribus
-            </Text>
+            <View>
+              <Text style={styles.textcolor}>
+                g Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+                quasi et possimus quae, earum, incidunt cumque praesentium
+                <TouchableHighlight>
+                  <Text style={[styles.pimpbutton, styles.margintoadd]}>
+                    + ADD TO WATCHLIST
+                  </Text>
+                </TouchableHighlight>
+              </Text>
+            </View>
           </View>
-          <TouchableHighlight>
-            <Text style={styles.pimpbutton}> + ADD TO WATCHLIST</Text>
-          </TouchableHighlight>
-
           <StatusBar style="auto" />
         </View>
+      </View>
+      <View style={styles.flextext}>
+        <Text style={styles.colornote}>8.6/10</Text>
+        <Text style={styles.colornote}>RATE THIDS</Text>
+        <Text style={styles.colornote}>Metascore</Text>
+      </View>
+      <View>
+        <Text style={[styles.cover, styles.titlesize, styles.bckg]}>
+          Top Billed Cast
+        </Text>
+      </View>
+      <View>
+        <Image
+          source={matthew}
+          style={[styles.cover, styles.colorstyle]}
+        ></Image>
       </View>
     </View>
   );
@@ -61,6 +79,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 
+  margintoadd: {
+    marginTop: 20,
+  },
+
   textcolor: {
     color: "white",
     marginLeft: 20,
@@ -73,6 +95,11 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: "white",
     fontWeight: "bold",
+    width: 130,
+  },
+
+  flexbut: {
+    flexDirection: "column",
   },
 
   textfull: {
@@ -112,6 +139,14 @@ const styles = StyleSheet.create({
   flexrow: {
     flexDirection: "row",
     marginRight: 15,
+  },
+  colornote: {
+    color: "white",
+  },
+  flextext: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 20,
   },
 });
 
