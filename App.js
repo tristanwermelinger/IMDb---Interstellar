@@ -5,7 +5,7 @@ import logo from "./assets/logo-imdb.png";
 const App = () => {
   return (
     <>
-      <Image source={require("./assets/logo-imdb.png")} style={styles.cover} />
+      <Image source={logo} style={styles.cover} />
       <View style={styles.container}>
         <Text>Hello app Interstellar</Text>
         <StatusBar style="auto" />
@@ -16,9 +16,9 @@ const App = () => {
 
 const styles = StyleSheet.create({
   cover: {
-    height: 300,
-    width: 200,
-    marginTop: 100,
+    height: 80,
+    width: 80,
+    marginTop: 50,
   },
 });
 
