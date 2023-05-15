@@ -30,20 +30,18 @@ const App = () => {
           >
             2014 PG-13 2h49min Adventure, Drama, Sci-Fi
           </Text>
-          <View>
-            <View style={styles.flexrow}>
-              <Image
-                source={film}
-                style={[styles.filmsize, styles.flexright]}
-              />
-              <Text style={styles.textcolor}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-                quasi et possimus quae, earum, incidunt cumque praesentium
-                doloribus
-              </Text>
-              <TouchableHighlight> + ADD TO WATCHLIST</TouchableHighlight>
-            </View>
+
+          <View style={styles.flexrow}>
+            <Image source={film} style={[styles.filmsize, styles.flexright]} />
+            <Text style={styles.textcolor}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+              quasi et possimus quae, earum, incidunt cumque praesentium
+              doloribus
+            </Text>
           </View>
+          <TouchableHighlight>
+            <Text style={styles.pimpbutton}> + ADD TO WATCHLIST</Text>
+          </TouchableHighlight>
 
           <StatusBar style="auto" />
         </View>
@@ -66,6 +64,15 @@ const styles = StyleSheet.create({
   textcolor: {
     color: "white",
     marginLeft: 20,
+    width: 160,
+  },
+
+  pimpbutton: {
+    backgroundColor: "blue",
+    alignItems: "flex-end",
+    fontSize: 15,
+    color: "white",
+    fontWeight: "bold",
   },
 
   textfull: {
@@ -78,8 +85,8 @@ const styles = StyleSheet.create({
     height: 120,
     width: 200,
     marginTop: Platform.OS === "android" ? Constants.statusBarHeight : 0,
-    borderWidth: 1,
-    borderColor: "yellow",
+    // borderWidth: 1,
+    // borderColor: "yellow",
   },
   forsize: {
     marginLeft: 15,
