@@ -7,7 +7,8 @@ const App = () => {
     <>
       <Image source={logo} style={styles.cover} />
       <View style={styles.container}>
-        <Text>Hello app Interstellar</Text>
+        <Text>Interstellar</Text>
+        <Text>2014 PG-13 2h49min Adventure, Drama, Sci-Fi</Text>
         <StatusBar style="auto" />
       </View>
     </>
@@ -18,7 +19,6 @@ const styles = StyleSheet.create({
   cover: {
     height: 80,
     width: 80,
-    marginTop: 50,
   },
 });
 
